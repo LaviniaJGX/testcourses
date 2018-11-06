@@ -87,7 +87,7 @@ describe('Student', function (){
     });
 
 
-    describe.only('GET /studentElements/:name',  () => {
+    describe('GET /studentElements/:name',  () => {
          it('should return student with the keyword in name', function(done) {
               chai.request(server)
               .get('/studentElements/m')
@@ -117,7 +117,7 @@ describe('Student', function (){
          });
     });
 
-	describe('POST /student', function () {
+	describe.only('POST /student', function () {
          it('should return confirmation message', function(done) {
               let student = { 
                    name:"xiao xiao",
