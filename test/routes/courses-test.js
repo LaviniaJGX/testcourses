@@ -100,7 +100,7 @@ describe('Courses', function (){
          });
     });
     
-	describe.only('GET /coursesHours/hours',  () => {
+	describe('GET /coursesHours/hours',  () => {
          it('should return total courses hours', function(done) {
               chai.request(server)
               .get('/coursesHours/hours')
@@ -122,7 +122,7 @@ describe('Courses', function (){
          });
     });
 
-    describe('GET /coursesElements/:courseTitle',  () => {
+    describe.only('GET /coursesElements/:courseTitle',  () => {
          it('should return courses with the keyword in course title', function(done) {
               chai.request(server)
               .get('/coursesElements/m')
