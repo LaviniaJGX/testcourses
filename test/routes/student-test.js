@@ -205,7 +205,7 @@ describe('Student', function (){
          });
 	});
   
-    describe.only('PUT /studentMajor/:id',  () => {
+    describe('PUT /studentMajor/:id',  () => {
 		describe('when id is valid',function(){
               it('should return a message and change major', function(done) {
 			       let student = { 
@@ -259,7 +259,7 @@ describe('Student', function (){
          });
 	});
 
-    describe('DELETE/student/:id',  () => {
+    describe.only('DELETE/student/:id',  () => {
 	     describe('when id is valid',function(){
 		      it('should return delete message ', function(done) {
                    chai.request(server)
