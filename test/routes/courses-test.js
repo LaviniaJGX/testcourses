@@ -158,7 +158,7 @@ describe('Courses', function (){
          });
     });
 
-	describe.only('POST /courses', function () {
+	describe('POST /courses', function () {
          it('should return confirmation message and update course', function(done) {
               let course = { 
                    courseTitle: 'Art' , 
@@ -197,7 +197,7 @@ describe('Courses', function (){
           });  // end-after
     }); // end-describe
 
-    describe('PUT /coursesCertain/:id/:teacherName/CHour',  () => {
+    describe.only('PUT /coursesCertain/:id/:teacherName/CHour',  () => {
 		describe('when id is valid',function(){
               it('should return a message and change class hours', function(done) {
 			       let course = { 
