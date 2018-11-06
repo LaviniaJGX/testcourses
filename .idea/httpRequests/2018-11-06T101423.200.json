@@ -1,0 +1,82 @@
+[
+  {
+    "_id": "5bddb6a96dac4604e4af91a5",
+    "courseTitle": "Database System",
+    "classHours": 42,
+    "studentNumbers": 35,
+    "studentCategory": "postgraduate",
+    "teacherName": "Lily",
+    "teacherType": "common",
+    "__v": 0
+  },
+  {
+    "_id": "5bddb6b56dac4604e4af91a6",
+    "courseTitle": "Software Architecture",
+    "classHours": 40,
+    "studentNumbers": 40,
+    "studentCategory": "postgraduate",
+    "teacherName": "David",
+    "teacherType": "admin",
+    "__v": 0
+  },
+  {
+    "_id": "5bddb6c26dac4604e4af91a7",
+    "courseTitle": "Computer Networks",
+    "classHours": 35,
+    "studentNumbers": 45,
+    "studentCategory": "postgraduate",
+    "teacherName": "Amanda",
+    "teacherType": "admin",
+    "__v": 0
+  },
+  {
+    "_id": "5bddb6cc6dac4604e4af91a8",
+    "courseTitle": "Client Programming",
+    "classHours": 30,
+    "studentNumbers": 50,
+    "studentCategory": "undergraduate",
+    "teacherName": "April",
+    "teacherType": "common",
+    "__v": 0
+  },
+  {
+    "_id": "5bddb6d86dac4604e4af91a9",
+    "courseTitle": "Computer Basics",
+    "classHours": 28,
+    "studentNumbers": 55,
+    "studentCategory": "undergraduate",
+    "teacherName": "Sky",
+    "teacherType": "admin",
+    "__v": 0
+  },
+  {
+    "_id": "5bddb6e26dac4604e4af91aa",
+    "courseTitle": "College English",
+    "classHours": 25,
+    "studentNumbers": 60,
+    "studentCategory": "undergraduate",
+    "teacherName": "Lucy",
+    "teacherType": "common",
+    "__v": 0
+  },
+  {
+    "_id": "5bddb6ed6dac4604e4af91ab",
+    "courseTitle": "Math",
+    "classHours": 33,
+    "studentNumbers": 33,
+    "studentCategory": "undergraduate",
+    "teacherName": "Lavinia",
+    "teacherType": "admin",
+    "__v": 0
+  },
+  {
+    "_id": "5bddb6f66dac4604e4af91ac",
+    "courseTitle": "Art appreciation",
+    "classHours": 20,
+    "studentNumbers": 25,
+    "studentCategory": "postgraduate",
+    "teacherName": "Anease",
+    "teacherType": "common",
+    "__v": 0
+  }
+]

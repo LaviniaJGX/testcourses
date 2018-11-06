@@ -1,0 +1,9 @@
+GET http://localhost:3000/courses
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+<> 2018-11-06T101423.200.json
+
+###
+
