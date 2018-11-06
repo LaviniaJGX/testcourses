@@ -133,7 +133,7 @@ describe('Teacher', function (){
          });
     });
 
-	describe.only('POST /teacher', function () {
+	describe('POST /teacher', function () {
          it('should return confirmation message', function(done) {
               let teacher = { 
                    name:"Jay",
@@ -170,7 +170,7 @@ describe('Teacher', function (){
           });  // end-after
     }); // end-describe
 
-    describe('PUT /teacher/:id',  () => {
+    describe.only('PUT /teacher/:id',  () => {
 		describe('when id is valid',function(){
               it('should return a message and change department', function(done) {
 			       let teacher = { 
