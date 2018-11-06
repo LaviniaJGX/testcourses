@@ -197,7 +197,7 @@ describe('Courses', function (){
           });  // end-after
     }); // end-describe
 
-    describe.only('PUT /coursesCertain/:id/:teacherName/CHour',  () => {
+    describe('PUT /coursesCertain/:id/:teacherName/CHour',  () => {
 		describe('when id is valid',function(){
               it('should return a message and change class hours', function(done) {
 			       let course = { 
@@ -262,7 +262,7 @@ describe('Courses', function (){
          });
 	});
   
-    describe('PUT /coursesCerNum/:id/:teacherName/CNum',  () => {
+    describe.only('PUT /coursesCerNum/:id/:teacherName/CNum',  () => {
 		describe('when id is valid',function(){
               it('should return a message and change student numbers', function(done) {
 			       let course = { 
