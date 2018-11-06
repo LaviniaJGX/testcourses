@@ -8,7 +8,7 @@ let _ = require('lodash' );
 
 describe('Student', function (){
     // TODO
-	describe.only('GET /student',  () => {
+	describe('GET /student',  () => {
          it('should return all the students in an array', function(done) {
               chai.request(server)
               .get('/student')
@@ -36,7 +36,7 @@ describe('Student', function (){
          });
     });
 
-    describe('GET /student/:id',  () => {
+    describe.only('GET /student/:id',  () => {
          it('should return the student with the certain ID', function(done) {
               chai.request(server)
               .get('/student/5bddb8c26dac4604e4af91b6')

@@ -390,7 +390,7 @@ describe('Courses', function (){
          });
     });
 
-    describe.only('DELETE/courses/:id',  () => {
+    describe('DELETE/courses/:id',  () => {
 	     describe('when id is valid',function(){
 		      it('should return delete message ', function(done) {
 				   chai.request(server)
