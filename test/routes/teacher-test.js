@@ -277,7 +277,7 @@ describe('Teacher', function (){
          });
 	});
 
-    describe.only('DELETE/teacher/:id',  () => {
+    describe('DELETE/teacher/:id',  () => {
 	     describe('when id is valid',function(){
 		      it('should return delete message ', function(done) {
                    chai.request(server)
