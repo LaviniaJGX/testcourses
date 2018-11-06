@@ -117,7 +117,7 @@ describe('Student', function (){
          });
     });
 
-	describe.only('POST /student', function () {
+	describe('POST /student', function () {
          it('should return confirmation message', function(done) {
               let student = { 
                    name:"xiao xiao",
@@ -151,7 +151,7 @@ describe('Student', function (){
           });  // end-after
     }); // end-describe
 
-    describe('PUT /student/:id',  () => {
+    describe.only('PUT /student/:id',  () => {
 		describe('when id is valid',function(){
               it('should return a message and change category', function(done) {
 			       let student = { 
