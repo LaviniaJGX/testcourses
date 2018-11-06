@@ -36,7 +36,7 @@ describe('Student', function (){
          });
     });
 
-    describe.only('GET /student/:id',  () => {
+    describe('GET /student/:id',  () => {
          it('should return the student with the certain ID', function(done) {
               chai.request(server)
               .get('/student/5bddb8c26dac4604e4af91b6')
@@ -57,7 +57,7 @@ describe('Student', function (){
          });
     });
 
-    describe('GET /studentName/:name',  () => {
+    describe.only('GET /studentName/:name',  () => {
          it('should return the student with the certain name', function(done) {
               chai.request(server)
               .get('/studentName/xiao ming')
