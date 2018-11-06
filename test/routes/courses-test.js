@@ -122,7 +122,7 @@ describe('Courses', function (){
          });
     });
 
-    describe.only('GET /coursesElements/:courseTitle',  () => {
+    describe('GET /coursesElements/:courseTitle',  () => {
          it('should return courses with the keyword in course title', function(done) {
               chai.request(server)
               .get('/coursesElements/m')
@@ -158,7 +158,7 @@ describe('Courses', function (){
          });
     });
 
-	describe('POST /courses', function () {
+	describe.only('POST /courses', function () {
          it('should return confirmation message and update course', function(done) {
               let course = { 
                    courseTitle: 'Art' , 
