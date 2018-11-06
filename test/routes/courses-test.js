@@ -37,7 +37,7 @@ describe('Courses', function (){
          });
     });
 
-    describe.only('GET /courses/:id',  () => {
+    describe('GET /courses/:id',  () => {
          it('should return message authentication not enough', function(done) {
               chai.request(server)
               .get('/courses/5bddb6a96dac4604e4af91a5')
@@ -78,7 +78,7 @@ describe('Courses', function (){
          });
     });
     
-    describe('GET /coursesNumbers/numbers',  () => {
+    describe.only('GET /coursesNumbers/numbers',  () => {
          it('should return total student numbers', function(done) {
               chai.request(server)
               .get('/coursesNumbers/numbers')
