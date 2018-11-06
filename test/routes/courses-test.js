@@ -7,7 +7,7 @@ chai.use(chaiHttp);
 let _ = require('lodash' );
 describe('Courses', function (){
     // TODO
-	describe('GET /courses',  () => {
+	describe.only('GET /courses',  () => {
          it('should return all the courses in an array', function(done) {
               chai.request(server)
               .get('/courses')
