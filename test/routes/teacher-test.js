@@ -170,7 +170,7 @@ describe('Teacher', function (){
           });  // end-after
     }); // end-describe
 
-    describe.only('PUT /teacher/:id',  () => {
+    describe('PUT /teacher/:id',  () => {
 		describe('when id is valid',function(){
               it('should return a message and change department', function(done) {
 			       let teacher = { 
@@ -224,7 +224,7 @@ describe('Teacher', function (){
          });
 	});
   
-    describe('PUT /teacherMajor/:id',  () => {
+    describe.only('PUT /teacherMajor/:id',  () => {
 		describe('when id is valid',function(){
               it('should return a message and change major', function(done) {
 			       let teacher = { 
