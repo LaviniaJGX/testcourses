@@ -7,7 +7,7 @@ chai.use(chaiHttp);
 let _ = require('lodash' );
 describe('Courses', function (){
     // TODO
-	describe.only('GET /courses',  () => {
+	describe('GET /courses',  () => {
          it('should return all the courses in an array', function(done) {
               chai.request(server)
               .get('/courses')
@@ -37,7 +37,7 @@ describe('Courses', function (){
          });
     });
 
-    describe('GET /courses/:id',  () => {
+    describe.only('GET /courses/:id',  () => {
          it('should return message authentication not enough', function(done) {
               chai.request(server)
               .get('/courses/5bddb6a96dac4604e4af91a5')
