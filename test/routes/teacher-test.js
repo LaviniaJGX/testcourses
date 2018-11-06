@@ -98,7 +98,7 @@ describe('Teacher', function (){
     });
 
 
-    describe.only('GET /teacherElements/:department',  () => {
+    describe('GET /teacherElements/:department',  () => {
          it('should return teacher with the keyword in department', function(done) {
               chai.request(server)
               .get('/teacherElements/s')
@@ -133,7 +133,7 @@ describe('Teacher', function (){
          });
     });
 
-	describe('POST /teacher', function () {
+	describe.only('POST /teacher', function () {
          it('should return confirmation message', function(done) {
               let teacher = { 
                    name:"Jay",
