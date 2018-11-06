@@ -326,7 +326,7 @@ describe('Courses', function (){
          });
     });
 
-	describe.only('PUT /courses/:id/:teacherName/Teacher',  () => {
+	describe('PUT /courses/:id/:teacherName/Teacher',  () => {
 		describe('when id is valid',function(){
               it('should return a message and change teacher name', function(done) {
 			       let course = { 
@@ -390,7 +390,7 @@ describe('Courses', function (){
          });
     });
 
-    describe('DELETE/courses/:id',  () => {
+    describe.only('DELETE/courses/:id',  () => {
 	     describe('when id is valid',function(){
 		      it('should return delete message ', function(done) {
 				   chai.request(server)
