@@ -7,7 +7,7 @@ chai.use(chaiHttp);
 let _ = require('lodash' );
 describe('Teacher', function (){
     // TODO
-	describe.only('GET /teacher',  () => {
+	describe('GET /teacher',  () => {
          it('should return all the teachers in an array', function(done) {
               chai.request(server)
               .get('/teacher')
@@ -36,7 +36,7 @@ describe('Teacher', function (){
          });
     });
 
-    describe('GET /teacher/:id',  () => {
+    describe.only('GET /teacher/:id',  () => {
          it('should return the teacher with the certain ID', function(done) {
               chai.request(server)
               .get('/teacher/5bddb8586dac4604e4af91af')
