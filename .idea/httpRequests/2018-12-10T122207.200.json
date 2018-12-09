@@ -1,0 +1,13 @@
+{
+  "message": "Course Added Successfully!",
+  "data": {
+    "_id": "5c0d412fbe3d8d30d8b31bc8",
+    "courseTitle": "Client Programming",
+    "classHours": 30,
+    "studentNumbers": 50,
+    "studentCategory": "undergraduate",
+    "teacherName": "April",
+    "teacherType": "common",
+    "__v": 0
+  }
+}

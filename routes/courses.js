@@ -1,8 +1,8 @@
-let courses = require('../models/courses');
-let express = require('express');
+
+import Course from '../models/courses';
+import express from 'express';
+import mongoose from 'mongoose';
 let router = express.Router();
-let mongoose = require('mongoose');
-var Course = require('../models/courses');
 
 var mongodbUri ='mongodb://test:dreammj01@ds151453.mlab.com:51453/testcourses';
 mongoose.connect(mongodbUri,{ useNewUrlParser: true });

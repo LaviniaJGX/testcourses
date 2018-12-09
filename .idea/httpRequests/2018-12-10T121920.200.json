@@ -1,0 +1,13 @@
+{
+  "message": "Course Added Successfully!",
+  "data": {
+    "_id": "5c0d4088be3d8d30d8b31bc6",
+    "courseTitle": "Database System",
+    "classHours": 42,
+    "studentNumbers": 35,
+    "studentCategory": "postgraduate",
+    "teacherName": "Lily",
+    "teacherType": "common",
+    "__v": 0
+  }
+}

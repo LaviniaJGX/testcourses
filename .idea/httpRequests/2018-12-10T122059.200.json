@@ -1,0 +1,13 @@
+{
+  "message": "Course Added Successfully!",
+  "data": {
+    "_id": "5c0d40ebbe3d8d30d8b31bc7",
+    "courseTitle": "Software Architecture",
+    "classHours": 40,
+    "studentNumbers": 40,
+    "studentCategory": "postgraduate",
+    "teacherName": "David",
+    "teacherType": "admin",
+    "__v": 0
+  }
+}

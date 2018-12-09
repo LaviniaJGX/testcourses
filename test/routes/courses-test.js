@@ -1,10 +1,13 @@
-let chai = require('chai');
-let chaiHttp = require('chai-http');
-let server = require('../../bin/www');
+import chai from 'chai';
+import chaiHttp from 'chai-http' ;
+import server from '../../bin/www';
 let expect = chai.expect;
-
+import _ from 'lodash';
+import things from 'chai-things'
+chai.use( things);
 chai.use(chaiHttp);
-let _ = require('lodash' );
+
+
 describe('Courses', function (){
     // TODO
 	describe('GET /courses',  () => {
@@ -16,7 +19,7 @@ describe('Courses', function (){
                    expect(res.body).to.be.a('array');
                    expect(res.body.length).to.equal(8);
                    let result = _.map(res.body, (course) => {
-                        return { courseTitle: course.courseTitle, 
+                        return { courseTitle: course.courseTitle,
                              classHours: course.classHours,
 				             studentNumbers: course.studentNumbers,
 				             studentCategory: course.studentCategory,
@@ -55,7 +58,7 @@ describe('Courses', function (){
                    expect(res.body).to.be.a('array');
                    expect(res.body.length).to.equal(1);
                    let result = _.map(res.body, (course) => {
-                        return { courseTitle: course.courseTitle, 
+                        return { courseTitle: course.courseTitle,
                              classHours: course.classHours,
 				             studentNumbers: course.studentNumbers,
 				             studentCategory: course.studentCategory,
@@ -77,7 +80,7 @@ describe('Courses', function (){
               });
          });
     });
-    
+
     describe('GET /coursesNumbers/numbers',  () => {
          it('should return total student numbers', function(done) {
               chai.request(server)
@@ -99,7 +102,7 @@ describe('Courses', function (){
               });
          });
     });
-    
+
 	describe('GET /coursesHours/hours',  () => {
          it('should return total courses hours', function(done) {
               chai.request(server)
@@ -131,7 +134,7 @@ describe('Courses', function (){
                    expect(res.body).to.be.a('array');
                    expect(res.body.length).to.equal(5);
                   let result = _.map(res.body, (course) => {
-                        return { courseTitle: course.courseTitle, 
+                        return { courseTitle: course.courseTitle,
                              classHours: course.classHours,
 				             studentNumbers: course.studentNumbers,
 				             studentCategory: course.studentCategory,
@@ -160,9 +163,9 @@ describe('Courses', function (){
 
 	describe('POST /courses', function () {
          it('should return confirmation message and update course', function(done) {
-              let course = { 
-                   courseTitle: 'Art' , 
-                   classHours: 10, 
+              let course = {
+                   courseTitle: 'Art' ,
+                   classHours: 10,
                    studentNumbers: 10,
 			       studentCategory:'undergraduate',
 			       teacherName:'Jay',
@@ -173,7 +176,7 @@ describe('Courses', function (){
               .send(course)
               .end(function(err, res) {
                    expect(res).to.have.status(200);
-                   expect(res.body).to.have.property('message').equal('Course Added Successfully!' ); 
+                   expect(res.body).to.have.property('message').equal('Course Added Successfully!' );
                    done();
               });
          });
@@ -182,8 +185,8 @@ describe('Courses', function (){
               .get('/courses')
               .end(function(err, res) {
                    let result = _.map(res.body, (course) => {
-                        return { 
-							 courseTitle: course.courseTitle, 
+                        return {
+							 courseTitle: course.courseTitle,
                              classHours: course.classHours,
 							 studentNumbers: course.studentNumbers,
 							 studentCategory: course.studentCategory,
@@ -200,8 +203,8 @@ describe('Courses', function (){
     describe('PUT /coursesCertain/:id/:teacherName/CHour',  () => {
 		describe('when id is valid',function(){
               it('should return a message and change class hours', function(done) {
-			       let course = { 
-                        classHours: 20, 
+			       let course = {
+                        classHours: 20,
                    };
                    chai.request(server)
                    .put('/coursesCertain/5bddb6b56dac4604e4af91a6/David/CHour')
@@ -218,7 +221,7 @@ describe('Courses', function (){
                    .get('/courses')
                    .end(function(err, res) {
                         let result = _.map(res.body, (student) => {
-                             return {courseTitle: course.courseTitle, 
+                             return {courseTitle: course.courseTitle,
                                   classHours: course.classHours,
 							      studentNumbers: course.studentNumbers,
 							      studentCategory: course.studentCategory,
@@ -227,8 +230,8 @@ describe('Courses', function (){
 					         };
                          });
                    });
-                   let course = { 
-                        classHours: 40,  
+                   let course = {
+                        classHours: 40,
                    };
 				   chai.request(server)
                    .put('/coursesCertain/5bddb6b56dac4604e4af91a6/David/CHour')
@@ -261,11 +264,11 @@ describe('Courses', function (){
               });
          });
 	});
-  
+
     describe('PUT /coursesCerNum/:id/:teacherName/CNum',  () => {
 		describe('when id is valid',function(){
               it('should return a message and change student numbers', function(done) {
-			       let course = { 
+			       let course = {
 			            studentNumbers:20,
                    };
                    chai.request(server)
@@ -283,7 +286,7 @@ describe('Courses', function (){
                    .get('/courses')
                    .end(function(err, res) {
                         let result = _.map(res.body, (student) => {
-                             return {courseTitle: course.courseTitle, 
+                             return {courseTitle: course.courseTitle,
                                   classHours: course.classHours,
 							      studentNumbers: course.studentNumbers,
 							      studentCategory: course.studentCategory,
@@ -292,8 +295,8 @@ describe('Courses', function (){
 					         };
                          });
                    });
-                   let course = { 
-                        studentNumbers:40,  
+                   let course = {
+                        studentNumbers:40,
                    };
 				   chai.request(server)
                    .put('/coursesCerNum/5bddb6b56dac4604e4af91a6/David/CNum')
@@ -329,7 +332,7 @@ describe('Courses', function (){
 	describe('PUT /courses/:id/:teacherName/Teacher',  () => {
 		describe('when id is valid',function(){
               it('should return a message and change teacher name', function(done) {
-			       let course = { 
+			       let course = {
 				        teacherName:"Willian",
                    };
                    chai.request(server)
@@ -347,7 +350,7 @@ describe('Courses', function (){
                    .get('/courses')
                    .end(function(err, res) {
                         let result = _.map(res.body, (student) => {
-                             return {courseTitle: course.courseTitle, 
+                             return {courseTitle: course.courseTitle,
                                   classHours: course.classHours,
 							      studentNumbers: course.studentNumbers,
 							      studentCategory: course.studentCategory,
@@ -356,8 +359,8 @@ describe('Courses', function (){
 					         };
                          });
                    });
-                   let course = { 
-                        teacherName:"David", 
+                   let course = {
+                        teacherName:"David",
                    };
 				   chai.request(server)
                    .put('/courses/5bddb6b56dac4604e4af91a6/Willian/Teacher')
@@ -401,18 +404,18 @@ describe('Courses', function (){
                         .delete('/courses/' + addID)
 						.end(function(err, res) {
                              expect(res).to.have.status(200);
-                             expect(res.body).to.have.property('message').equal('Course Successfully Deleted!' );  
+                             expect(res.body).to.have.property('message').equal('Course Successfully Deleted!' );
                              done();
                         });
-				   });  
+				   });
               });
 		      after(function  (done) {
                    chai.request(server)
                    .get('/courses')
                    .end(function(err, res) {
                         let result = _.map(res.body, (course) => {
-                             return { 
-								  courseTitle: course.courseTitle, 
+                             return {
+								  courseTitle: course.courseTitle,
                                   classHours: course.classHours,
 							      studentNumbers: course.studentNumbers,
 							      studentCategory: course.studentCategory,

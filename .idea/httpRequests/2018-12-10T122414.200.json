@@ -1,0 +1,13 @@
+{
+  "message": "Course Added Successfully!",
+  "data": {
+    "_id": "5c0d41aebe3d8d30d8b31bcb",
+    "courseTitle": "Art appreciation",
+    "classHours": 20,
+    "studentNumbers": 25,
+    "studentCategory": "postgraduate",
+    "teacherName": "Anease",
+    "teacherType": "common",
+    "__v": 0
+  }
+}

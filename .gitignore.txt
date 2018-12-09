@@ -1,5 +1,11 @@
-  /node_modules
-  *.log
-  package-lock.json
-  /**/.DS_Store*
-  *DS_Store*
+
+    /node_modules
+    *.log
+    package-lock.json
+    /**/.DS_Store*
+    *DS_Store*
+   /coverage
+   /build
+   /dist
+   /.idea
+   /lib

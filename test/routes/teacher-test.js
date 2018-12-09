@@ -1,10 +1,12 @@
-let chai = require('chai');
-let chaiHttp = require('chai-http');
-let server = require('../../bin/www');
+import chai from 'chai';
+import chaiHttp from 'chai-http' ;
+import server from '../../bin/www';
 let expect = chai.expect;
-
+import _ from 'lodash';
+import things from 'chai-things'
+chai.use( things);
 chai.use(chaiHttp);
-let _ = require('lodash' );
+
 describe('Teacher', function (){
     // TODO
 	describe('GET /teacher',  () => {
@@ -135,7 +137,7 @@ describe('Teacher', function (){
 
 	describe('POST /teacher', function () {
          it('should return confirmation message', function(done) {
-              let teacher = { 
+              let teacher = {
                    name:"Jay",
                    teacherType:"admin",
                    teacherGender:"male",
@@ -147,7 +149,7 @@ describe('Teacher', function (){
               .send(teacher)
               .end(function(err, res) {
                    expect(res).to.have.status(200);
-                   expect(res.body).to.have.property('message').equal('Teacher Added Successfully!' ); 
+                   expect(res.body).to.have.property('message').equal('Teacher Added Successfully!' );
                    done();
               });
          });
@@ -156,7 +158,7 @@ describe('Teacher', function (){
               .get('/teacher')
               .end(function(err, res) {
                    let result = _.map(res.body, (teacher) => {
-                        return { 
+                        return {
 							 name:teacher.name,
                              teacherType:teacher.teacherType,
                              teacherGender:teacher.teacherGender,
@@ -173,8 +175,8 @@ describe('Teacher', function (){
     describe('PUT /teacher/:id',  () => {
 		describe('when id is valid',function(){
               it('should return a message and change department', function(done) {
-			       let teacher = { 
-                        department: "Art and Design", 
+			       let teacher = {
+                        department: "Art and Design",
                    };
                    chai.request(server)
                    .put('/teacher/5bddb84c6dac4604e4af91ae')
@@ -199,8 +201,8 @@ describe('Teacher', function (){
 					         };
                          });
                    });
-                   let teacher = { 
-                        department: "Science and Technology",  
+                   let teacher = {
+                        department: "Science and Technology",
                    };
 				   chai.request(server)
                    .put('/teacher/5bddb84c6dac4604e4af91ae')
@@ -223,12 +225,12 @@ describe('Teacher', function (){
               });
          });
 	});
-  
+
     describe('PUT /teacherMajor/:id',  () => {
 		describe('when id is valid',function(){
               it('should return a message and change major', function(done) {
-			       let teacher = { 
-                        departmentMajor:"Designing" , 
+			       let teacher = {
+                        departmentMajor:"Designing" ,
                    };
                    chai.request(server)
                    .put('/teacherMajor/5bddb84c6dac4604e4af91ae')
@@ -253,8 +255,8 @@ describe('Teacher', function (){
 					         };
                          });
                    });
-                   let teacher = { 
-                        departmentMajor: "Software Engineering",  
+                   let teacher = {
+                        departmentMajor: "Software Engineering",
                    };
 				   chai.request(server)
                    .put('/teacherMajor/5bddb84c6dac4604e4af91ae')
@@ -288,10 +290,10 @@ describe('Teacher', function (){
                         .delete('/teacher/' + addID)
 						.end(function(err, res) {
                              expect(res).to.have.status(200);
-                             expect(res.body).to.have.property('message').equal('Teacher Deleted successfully!' );  
+                             expect(res.body).to.have.property('message').equal('Teacher Deleted successfully!' );
                              done();
                         });
-				   });   
+				   });
               });
 		      after(function  (done) {
                    chai.request(server)

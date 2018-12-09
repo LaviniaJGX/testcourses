@@ -1,0 +1,22 @@
+[
+  {
+    "_id": "5c0d0e3071af9b0016b313b9",
+    "courseTitle": "Computer Networks",
+    "classHours": 35,
+    "studentNumbers": 45,
+    "studentCategory": "postgraduate",
+    "teacherName": "Amanda",
+    "teacherType": "admin",
+    "__v": 0
+  },
+  {
+    "_id": "5c0d0e3071af9b0016b313ba",
+    "courseTitle": "Computer Basics",
+    "classHours": 28,
+    "studentNumbers": 55,
+    "studentCategory": "undergraduate",
+    "teacherName": "Sky",
+    "teacherType": "admin",
+    "__v": 0
+  }
+]

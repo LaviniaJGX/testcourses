@@ -1,0 +1,13 @@
+{
+  "message": "Course Added Successfully!",
+  "data": {
+    "_id": "5c0d415fbe3d8d30d8b31bc9",
+    "courseTitle": "College English",
+    "classHours": 25,
+    "studentNumbers": 60,
+    "studentCategory": "undergraduate",
+    "teacherName": "Lucy",
+    "teacherType": "common",
+    "__v": 0
+  }
+}

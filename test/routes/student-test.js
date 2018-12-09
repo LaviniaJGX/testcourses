@@ -1,10 +1,11 @@
-let chai = require('chai');
-let chaiHttp = require('chai-http');
-let server = require('../../bin/www');
+import chai from 'chai';
+import chaiHttp from 'chai-http' ;
+import server from '../../bin/www';
 let expect = chai.expect;
-
+import _ from 'lodash';
+import things from 'chai-things'
+chai.use( things);
 chai.use(chaiHttp);
-let _ = require('lodash' );
 
 describe('Student', function (){
     // TODO
@@ -119,7 +120,7 @@ describe('Student', function (){
 
 	describe('POST /student', function () {
          it('should return confirmation message', function(done) {
-              let student = { 
+              let student = {
                    name:"xiao xiao",
                    studentCategory:"undergraduate",
                    coursesNumbers:4,
@@ -130,7 +131,7 @@ describe('Student', function (){
               .send(student)
               .end(function(err, res) {
                    expect(res).to.have.status(200);
-                   expect(res.body).to.have.property('message').equal('Student Added Successfully!' ); 
+                   expect(res.body).to.have.property('message').equal('Student Added Successfully!' );
                    done();
               });
          });
@@ -154,8 +155,8 @@ describe('Student', function (){
     describe('PUT /student/:id',  () => {
 		describe('when id is valid',function(){
               it('should return a message and change category', function(done) {
-			       let student = { 
-                        studentCategory:"postgraduate", 
+			       let student = {
+                        studentCategory:"postgraduate",
                    };
                    chai.request(server)
                    .put('/student/5bddb8c26dac4604e4af91b6')
@@ -180,8 +181,8 @@ describe('Student', function (){
 					         };
                          });
                    });
-                   let student = { 
-                        studentCategory:"undergraduate", 
+                   let student = {
+                        studentCategory:"undergraduate",
                    };
 				   chai.request(server)
                    .put('/student/5bddb8c26dac4604e4af91b6')
@@ -204,12 +205,12 @@ describe('Student', function (){
               });
          });
 	});
-  
+
     describe('PUT /studentMajor/:id',  () => {
 		describe('when id is valid',function(){
               it('should return a message and change major', function(done) {
-			       let student = { 
-                        major:"Art" , 
+			       let student = {
+                        major:"Art" ,
                    };
                    chai.request(server)
                    .put('/studentMajor/5bddb8c26dac4604e4af91b6')
@@ -235,8 +236,8 @@ describe('Student', function (){
                          });
 				         //done();
                    });
-                   let student = { 
-                        major:"Software Engineering", 
+                   let student = {
+                        major:"Software Engineering",
                    };
 				   chai.request(server)
                    .put('/studentMajor/5bddb8c26dac4604e4af91b6')
@@ -270,10 +271,10 @@ describe('Student', function (){
                         .delete('/student/' + addID)
 						.end(function(err, res) {
                              expect(res).to.have.status(200);
-                             expect(res.body).to.have.property('message').equal('Student Deleted successfully!' ); 
+                             expect(res.body).to.have.property('message').equal('Student Deleted successfully!' );
                              done();
                         });
-				   });   
+				   });
               });
 		      after(function  (done) {
                    chai.request(server)

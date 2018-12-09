@@ -1,0 +1,13 @@
+{
+  "message": "Course Added Successfully!",
+  "data": {
+    "_id": "5c0d4185be3d8d30d8b31bca",
+    "courseTitle": "Math",
+    "classHours": 33,
+    "studentNumbers": 33,
+    "studentCategory": "undergraduate",
+    "teacherName": "Lavinia",
+    "teacherType": "admin",
+    "__v": 0
+  }
+}
