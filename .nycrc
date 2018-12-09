@@ -15,10 +15,10 @@
     "instrument": false,
     "check-coverage": true,
     "per-file": false,
-    "lines": 70,
-    "statements": 70,
-    "functions": 50,
-    "branches": 50,
+    "lines": 60,
+    "statements": 60,
+    "functions": 30,
+    "branches": 30,
     "sourceMap": false,
     "instrument": false
  }
