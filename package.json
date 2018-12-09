@@ -9,6 +9,8 @@
     "coverage": "cross-env NODE_ENV=test PORT=4000 nyc mocha test/routes/courses-test.js",
     "publish-coverage": "nyc report --reporter=text-lcov | coveralls",
     "clean": "rimraf ./lib && mkdir lib",
+    "postbuild": "npm run server",
+    "prebuild": "npm-run-all test clean",
     "build": "babel ./ --out-dir lib/ --ignore ./node_modules,./.babelrc,./package.json,./package-lock.json,./test --copy-files",
     "test:watch": "npm run test -- --watch",
     "lint": "esw  ./test ./routes ./models/ app.js",
