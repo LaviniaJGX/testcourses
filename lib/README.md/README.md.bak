@@ -505,7 +505,7 @@ I have done these in my test shown as below:
 2. Testing – 3 REST resources (3 test files); Clear test cases (it block specifications); Before/After hooks; Some exception testing.
 3. Git – Branch-Edit-Merge workflow; 
 4. Commit ‘work units’; 
-   $F:\Agile Software Practice\coursestest>git rebase -i af9dfe77c98512fe37cdf931d91b0c96cbe98099
+   $F:\Agile Software Practice\coursestest>git rebase -i 927c74e067d899
      [detached HEAD 7195e0e] courses-testing
      Date: Tue Nov 6 10:06:30 2018 +0800
      2 files changed, 51 insertions(+), 33 deletions(-)
@@ -514,12 +514,12 @@ I have done these in my test shown as below:
 5. Rollback;
    When I tested teacher-test, I found somgthing wrong, then I use git-reset to return to the latest correct commit.
    Also , I commit "test rollback" ,then: 
-     $ git revert d762695a187e2507517eea55ab560dfe6403b299 , we can get that: 
+     $ git revert 70a3692d38ebaa0f2 , we can get that: 
      $ d0db710 (HEAD -> master) HEAD@{0}: revert: Revert "test rollback"
    To revert all the local actions from 70a3692d38ebaa0f2 up to “HEAD,” use the following:
-     $ git revert d762695a187e2507517eea55ab560dfe6403b299 HEAD
+     $ git revert 70a3692d38ebaa0f2..HEAD
    After checking out the remote repository, we can first use git revert and then push as usual:
-     $ git revert d762695a187e2507517eea55ab560dfe6403b299
+     $ git revert 70a3692d38ebaa0f2..
        git push origin
 6. Testing – Test code structure (nested describe blocks); 
 7. Database integration;
