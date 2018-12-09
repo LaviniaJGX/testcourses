@@ -7,5 +7,5 @@ notifications:
     recipients:
     - 840762603@qq.com
     on_success: never
-    on_failure: always       
+    on_failure: always
 

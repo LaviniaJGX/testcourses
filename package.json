@@ -5,6 +5,7 @@
   "scripts": {
     "server": "cross-env NODE_ENV=dev PORT=3001 node lib/bin/www",
     "start": "npm-run-all test build server",
+    "test": "cross-env NODE_ENV=test mocha --compilers js:babel-core/register test/routes/courses-test.js",
     "clean": "rimraf ./lib && mkdir lib",
     "build": "babel ./ --out-dir lib/ --ignore ./node_modules,./.babelrc,./package.json,./package-lock.json,./test --copy-files",
     "test:watch": "npm run test -- --watch",
