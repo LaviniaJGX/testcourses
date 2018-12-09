@@ -2,3 +2,10 @@ dist: trusty
 language: node_js
 node_js:
 - stable
+notifications:
+  email:
+    recipients:
+    - 840762603@qq.com
+    on_success: never
+    on_failure: always       
+
