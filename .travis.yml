@@ -2,22 +2,5 @@ dist: trusty
 language: node_js
 node_js:
 - stable
-script:
-- npm run coverage
-after_success:
-- npm run publish-coverage
-notifications:
-  email:
-    recipients:
-    - 840762603@qq.com
-    on_success: never
-    on_failure: always
-deploy:
-  provider: heroku
-  api_key:
-     secure: ilKXgTuuXYbEPSJVAbpd56v/HEZAsjmZ59x1cZl2XgSNfr/l6fE4cpwmc9Xci3wHjbmwnEK05lvB9WL+mViJWUmylK/splXHLF0lEJ3d86QrpXv2HZ3sA4J/xKlVyp2ao9tF9kxqHrDfqTzR3P1gkFeX/6W/PQEbpU6+2gaTdOUmi+foRM1GLgs37G5sbi1FsIHeV8nC9cg40EfN6XPP9thO53x2oyjx/dNu5kN/IF3v5w66WKCZTH0tzzKBSLF9Oc/1V6I+Xua9KebdUuLOWZShMQ1ExYZLeuZikHZR4mdF/2t4gg5P+1QHk4vGex5do9mmvO21AUUrmrJyk1QOqxNhtGoEyAPSZmjSCSm1UQa+RLJo4Y6XDu8nBx+UUUPdSrM3ZWcVqBR8CRHUsXh4ooPiW1wEunHQ1gL/3ErLpdiRy7+tXGg7yEXdUTV3fWBZulKIfShfePQs1xtqWdBDp4TalpJfJHGrvPjPk9VdUmNTWPBwAJYy/XdgY8EGL2DsPlDLcD7MQ8ycqQZyvRx4NJxyLvEKymeHkSgzxtGW0+FKrFiRGOiEvFtljn1jTWBQnHHs3zodOkeeZZyO/pHMnyoUhKqWgTr4NCHsrVwy3tUwfUmMKvkT3Cy395ZYINAEatK7WASkQEGDxNb8fn/pr2AStfym9pKbBunY0aW2XdA=
-  on:
-     repo: LaviniaJGX/coursestest
-  app:
-        endend
+
 
