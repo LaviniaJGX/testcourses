@@ -9,7 +9,7 @@
     "test_courses":"cross-env NODE_ENV=test mocha --compilers js:babel-core/register test/routes/courses-test.js",
     "test_teacher":"cross-env NODE_ENV=test mocha --compilers js:babel-core/register test/routes/teacher-test.js",
     "test_student":"cross-env NODE_ENV=test mocha --compilers js:babel-core/register test/routes/student-test.js",
-    "coverage": "cross-env NODE_ENV=test PORT=4000 nyc mocha test/routes/student-test.js",
+    "coverage": "cross-env NODE_ENV=test PORT=4000 nyc mocha test/routes/courses-test.js",
     "publish-coverage": "nyc report --reporter=text-lcov | coveralls",
     "clean": "rimraf ./lib && mkdir lib",
     "postbuild": "npm run server",

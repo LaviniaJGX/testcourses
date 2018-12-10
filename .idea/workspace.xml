@@ -57,7 +57,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="js" value="46" />
-          <entry key="json" value="126" />
+          <entry key="json" value="133" />
           <entry key="nycrc" value="22" />
           <entry key="txt" value="4" />
           <entry key="yml" value="14" />
@@ -65,7 +65,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JSON" value="126" />
+          <entry key="JSON" value="133" />
           <entry key="JavaScript" value="46" />
           <entry key="PLAIN_TEXT" value="26" />
           <entry key="YAML" value="14" />
@@ -274,7 +274,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11423000" />
+    <option name="totallyTimeSpent" value="11558000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
