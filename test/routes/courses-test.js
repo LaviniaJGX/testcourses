@@ -1,24 +1,12 @@
-import chai from 'chai';
-import chaiHttp from 'chai-http' ;
+let chai = require('chai');
+let chaiHttp = require('chai-http');
+let server = require('../../bin/www');
 let expect = chai.expect;
-import things from 'chai-things'
-chai.use( things);
-chai.use(chaiHttp);
-import _ from 'lodash';
 
-var server = null ;
-var courses = null ; // CHANGED
+chai.use(chaiHttp);
+let _ = require('lodash' );
 
 describe('Courses', function (){
-    before(function(){
-        delete require.cache[require.resolve('../../bin/www')];
-        delete require.cache[require.resolve('../../models/courses')];
-        courses = require('../../models/courses');
-        server = require('../../bin/www');
-    });
-    after(function (done) {
-        server.close(done);
-    });
     // TODO
     describe('GET /courses',  () => {
         it('should return all the courses in an array', function(done) {

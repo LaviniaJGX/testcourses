@@ -1,11 +1,10 @@
-import chai from 'chai';
-import chaiHttp from 'chai-http' ;
-import server from '../../bin/www';
+let chai = require('chai');
+let chaiHttp = require('chai-http');
+let server = require('../../bin/www');
 let expect = chai.expect;
-import _ from 'lodash';
-import things from 'chai-things'
-chai.use( things);
+
 chai.use(chaiHttp);
+let _ = require('lodash' );
 
 describe('Teacher', function (){
     // TODO

@@ -1,8 +1,7 @@
-
-import Teacher from '../models/teacher';
-import express from 'express';
-import mongoose from 'mongoose';
+let express = require('express');
 let router = express.Router();
+let mongoose = require('mongoose');
+var Teacher = require('../models/teacher');
 
 var mongodbUri ='mongodb://test:dreammj01@ds151453.mlab.com:51453/testcourses';
 mongoose.connect(mongodbUri,{ useNewUrlParser: true });
